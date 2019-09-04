@@ -29,9 +29,6 @@ class PID {
   double dpp;
   double dpi;
   double dpd;
-  double seq_tol;
-
-  double bestErr;
 
   double steer_value;
 

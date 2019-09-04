@@ -21,7 +21,7 @@ steer_value = -Kp*cte - Ki*cte_sum - Kd*cte_diff
 
 This PID control algorithm and parameters twiddle are coded based on the instructions. Although the twiddle parameters will find the optimal parameters, some manually twiddle for the initial `p` and `dp` are still needed to prevent the eco car drive out of road when the PID controller trying to converge. Thus, a good understanding of environments is important for PID control.
 
-The `p` and `dp` are {0.01, 0.001, 0.1} and {0.2, 0.0, 5}. The best parameters are found as `pid.Init(0.1995, 0.0009, 4.5125)` (kp, ki, kd). 
+The `dp` and `p` are {0.01, 0.001, 0.1} and {0.2, 0.0, 5}. The best parameters are found as `pid.Init(0.1995, 0.0009, 4.5125)` (kp, ki, kd). 
 
 <img src="./parameters_twiddle.png" width="500">
 
