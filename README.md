@@ -18,6 +18,14 @@ steer_value = -Kp*cte - Ki*cte_sum - Kd*cte_diff
 
 
 ## Reflections 
+### P component
+The P component basic reduce the CTE and make the car converge to the desired lane maker. However, if the P paramter is large, the car will overshoot the roadside. 
+
+### I component
+The I component will controll the car motion when the car itself has the systematic bias. In this simulation case, the eco car do not have such bias, so the I will be closed to zero. 
+
+### D component
+The D component is the differential parameter to make the eco car drive along the desired lane more stable. Also, the optimal D parameter can provent overshooting problem.
 
 This PID control algorithm and parameters twiddle are coded based on the instructions. Although the twiddle parameters will find the optimal parameters, some manually twiddle for the initial `p` and `dp` are still needed to prevent the eco car drive out of road when the PID controller trying to converge. Thus, a good understanding of environments is important for PID control.
 
